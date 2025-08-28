@@ -15,7 +15,7 @@ def get_active_users(users):
 
 ### Analysis of Comment 1: "This is inefficient. Don't loop twice conceptually."
 
-* **Positive Rephrasing:** Great job on getting the logic working correctly!  We can make this code even more efficient and Pythonic by streamlining the conditional check within the loop.
+* **Positive Rephrasing:** Great job getting the functionality working!  This code is clear and easy to read.
 
 * **The 'Why':** **
 
@@ -23,7 +23,8 @@ def get_active_users(users):
 
 ```python
 def get_active_users(users):
-    return [u for u in users if u.is_active and u.profile_complete]
+    results = [u for u in users if u.is_active and u.profile_complete]
+    return results
 ```
 
 * **Learn More:** [Relevant Resource](https://wiki.python.org/moin/TimeComplexity)
@@ -32,7 +33,7 @@ def get_active_users(users):
 
 ### Analysis of Comment 2: "Variable 'u' is a bad name."
 
-* **Positive Rephrasing:** Great job on the function's logic; it clearly filters users based on the criteria.
+* **Positive Rephrasing:** Great work on the `get_active_users` function.
 
 * **The 'Why':** **
 
@@ -46,7 +47,7 @@ def get_active_users(users):
             active_users.append(user)
     return active_users
 
-#Even better, leveraging list comprehension for conciseness:
+#Even better, using list comprehension for brevity and clarity:
 def get_active_users(users):
     return [user for user in users if user.is_active and user.profile_complete]
 ```
@@ -57,7 +58,7 @@ def get_active_users(users):
 
 ### Analysis of Comment 3: "Boolean comparison '== True' is redundant."
 
-* **Positive Rephrasing:** great job on the `get_active_users` function!  Your logic is perfectly clear.
+* **Positive Rephrasing:** Great job on implementing the `get_active_users` function!  I noticed a small optimization we can make.
 
 * **The 'Why':** **
 
@@ -67,7 +68,7 @@ def get_active_users(users):
 def get_active_users(users):
     results = []
     for u in users:
-        if u.is_active and u.profile_complete:
+        if u.is_active and u.profile_complete:  # Removed redundant comparison to True
             results.append(u)
     return results
 ```
@@ -78,7 +79,7 @@ def get_active_users(users):
 
 ## Overall Summary
 
-This function is a great start to identifying active users!  We can make it even more efficient and readable by streamlining the boolean checks and choosing more descriptive variable names.  These small refinements will significantly improve the code's clarity and performance.
+Your function effectively identifies active users with complete profiles!  We can make it even more concise and efficient by streamlining the looping and improving variable naming.  Let's refine it to boost performance and readability.
 
 
 ---

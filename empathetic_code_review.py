@@ -8,8 +8,8 @@ import requests
 
 class EmpatheticCodeReviewer:
     def __init__(self):
-            self.api_key = os.getenv("OPENAI_API_KEY")
-            self.api_url = os.getenv("OPENAI_API_URL")
+            self.api_key = os.getenv("GEMINI_API_KEY")
+            self.api_url = os.getenv("GEMINI_API_URL")
         
     def call_gemini_api(self, prompt: str) -> str:
         """
